@@ -1,0 +1,191 @@
+<!-- Início do Widget Isolado -->
+<div id="jr-naver-isolated-widget">
+  <style>
+    /* Reset local e isolamento total de estilos */
+    #jr-naver-isolated-widget {
+      width: 115%;
+      margin-left: -7.5%;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      padding: 18px;
+      position: relative;
+    }
+    #jr-naver-isolated-widget *, 
+    #jr-naver-isolated-widget *::before, 
+    #jr-naver-isolated-widget *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Cabeçalho expandido (sem a logo, focado no pesquisador mais alto e amplo) */
+    #jr-naver-isolated-widget .jr-header {
+      display: flex;
+      width: 100%;
+      margin-bottom: 22px;
+    }
+
+    /* Área de Pesquisa ampla ocupando todo o topo */
+    #jr-naver-isolated-widget .jr-search-area {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      gap: 10px;
+    }
+
+    #jr-naver-isolated-widget .jr-search-input {
+      flex: 1;
+      height: 48px;
+      padding: 0 18px;
+      border: 2px solid #00c73c;
+      border-radius: 24px;
+      outline: none;
+      font-size: 16px;
+      color: #333;
+      background-color: #fafafa;
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+
+    #jr-naver-isolated-widget .jr-search-input:focus {
+      background-color: #ffffff;
+      border-color: #009e2f;
+    }
+
+    #jr-naver-isolated-widget .jr-search-btn {
+      background-color: #00c73c;
+      border: none;
+      border-radius: 24px;
+      min-width: 52px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: #ffffff;
+      transition: background-color 0.2s ease;
+    }
+
+    #jr-naver-isolated-widget .jr-search-btn:hover {
+      background-color: #009e2f;
+    }
+
+    /* Seção de Ícones de Navegação com imagens */
+    #jr-naver-isolated-widget .jr-nav-icons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 22px;
+      padding: 0 10px;
+    }
+
+    #jr-naver-isolated-widget .jr-nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #444;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    #jr-naver-isolated-widget .jr-nav-icon-box {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #f0f4f8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 6px;
+      overflow: hidden;
+    }
+
+    #jr-naver-isolated-widget .jr-nav-icon-box img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+    }
+
+    /* Imagem Principal do Banner */
+    #jr-naver-isolated-widget .jr-main-banner {
+      width: 100%;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    #jr-naver-isolated-widget .jr-main-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Imagem abaixo do banner com link */
+    #jr-naver-isolated-widget .jr-bottom-link-image {
+      display: block;
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    #jr-naver-isolated-widget .jr-bottom-link-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+
+  <!-- Cabeçalho contendo o pesquisador ampliado (Sem o título/logo) -->
+  <div class="jr-header">
+    <div class="jr-search-area">
+      <input type="text" class="jr-search-input" placeholder="O que você procura hoje?">
+      <button class="jr-search-btn" title="Pesquisar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Ícones de Navegação com imagens temporárias -->
+  <div class="jr-nav-icons">
+    <a href="#" class="jr-nav-item">
+      <div class="jr-nav-icon-box">
+        <img src="https://img.icons8.com/color/96/trophy.png" alt="Recomendados">
+      </div>
+      <span>Destaque</span>
+    </a>
+    <a href="#" class="jr-nav-item">
+      <div class="jr-nav-icon-box">
+        <img src="https://img.icons8.com/color/96/bear.png" alt="Personagens">
+      </div>
+      <span>Personagens</span>
+    </a>
+    <a href="#" class="jr-nav-item">
+      <div class="jr-nav-icon-box">
+        <img src="https://img.icons8.com/color/96/grid.png" alt="Categorias">
+      </div>
+      <span>Categorias</span>
+    </a>
+    <a href="#" class="jr-nav-item">
+      <div class="jr-nav-icon-box">
+        <img src="https://img.icons8.com/color/96/like--v1.png" alt="Favoritos">
+      </div>
+      <span>Favoritos</span>
+    </a>
+  </div>
+
+  <!-- Imagem Principal (Banner temporário) -->
+  <div class="jr-main-banner">
+    <img src="https://placehold.co/800x450/70a1ff/ffffff?text=Sua+Imagem+Principal+Aqui" alt="Banner Principal">
+  </div>
+
+  <!-- Campo abaixo da imagem grande (Link com imagem temporária) -->
+  <a href="https://seu-link-aqui.com" class="jr-bottom-link-image" target="_blank" rel="noopener">
+    <img src="https://placehold.co/800x120/00c73c/ffffff?text=Sua+Imagem+com+Link+Aqui" alt="Banner com Link">
+  </a>
+
+</div>
+<!-- Fim do Widget Isolado -->
